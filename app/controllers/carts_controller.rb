@@ -1,7 +1,14 @@
 class CartsController < ApplicationController
 
   def show
+    # if enhanced_cart.length == 0
+    #   render 'empty'
+    # else
+    #   # render 'show'
+    # end
   end
+
+
 
   def add_item
     product_id = params[:product_id].to_s
