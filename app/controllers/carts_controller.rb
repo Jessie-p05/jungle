@@ -1,14 +1,11 @@
 class CartsController < ApplicationController
-
+  
   def show
-    # if enhanced_cart.length == 0
-    #   render 'empty'
-    # else
-    #   # render 'show'
-    # end
+    @cartCount = cart.length
+    if @cartCount == 0
+      render :action => "special_show"
+    end
   end
-
-
 
   def add_item
     product_id = params[:product_id].to_s
