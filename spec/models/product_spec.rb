@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Product, type: :model do
   describe 'Validations' do
-    before do
+    before :each do
       @product = Product.new({:name => 'chair',:price => 100, :quantity => 20, :category => Category.new({:name => 'furniture'})})
       @product.save!
     end
